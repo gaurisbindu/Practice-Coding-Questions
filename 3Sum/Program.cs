@@ -22,8 +22,26 @@ namespace Practice_Coding_Questions._3Sum
 
             var result = SolutionOne_Naive.ThreeSum(Nums);
 
-            Console.Write("Output - [");
+            Console.Write("Output (Naive Approach(3 loops)) - [");
             foreach (var item in result)
+            {
+                Console.Write($"[{item[0]}, {item[1]}, {item[2]}] ");
+            }
+            Console.Write("]\n");
+
+            var result2 = SolutionTwo_Better.ThreeSum(Nums);
+
+            Console.Write("Output (Better Approach (2 loops)) - [");
+            foreach (var item in result2)
+            {
+                Console.Write($"[{item[0]}, {item[1]}, {item[2]}] ");
+            }
+            Console.Write("]\n");
+
+            var result3 = SolutionThree_Optimal.ThreeSum(Nums);
+
+            Console.Write("Output (Optimal Approach(2 pointer technique)) - [");
+            foreach (var item in result3)
             {
                 Console.Write($"[{item[0]}, {item[1]}, {item[2]}] ");
             }
